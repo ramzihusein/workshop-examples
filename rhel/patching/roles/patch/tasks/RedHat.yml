@@ -1,0 +1,19 @@
+---
+- name: Update all packages to latest
+  yum:
+    name='*'
+    state='latest'
+
+- name: Check for reboot
+  command: needs-restarting -r
+  register: reboot
+
+- name: Debug demo
+  debug:
+    var: reboot
+
+- name: Reboot if needed
+  reboot:
+    reboot_timeout: 600
+    msg: "Reboot initiated by Ansible Automation Platform"
+    when: reboot.rc == 1
