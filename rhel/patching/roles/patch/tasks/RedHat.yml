@@ -17,4 +17,4 @@
   reboot:
     reboot_timeout: 600
     msg: "Reboot initiated by Ansible Automation Platform"
-    when: reboot.rc == 1
+  when: reboot.rc == 1
