@@ -7,6 +7,7 @@
 - name: Check for reboot
   command: needs-restarting -r
   register: reboot
+  ignore_errors: yes
 
 - name: Debug demo
   debug:
