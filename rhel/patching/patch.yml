@@ -1,0 +1,10 @@
+---
+- name: Patch all linux servers
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+    - name: begin patching
+      include_role:
+        name: patch
+        
