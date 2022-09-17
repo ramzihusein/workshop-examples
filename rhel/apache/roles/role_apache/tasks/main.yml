@@ -20,7 +20,7 @@
   firewalld:
     service: http
     permanent: true
-    state: enabled
+    state: disabled
     immediate: yes
 
 - name: firewalld permits https service
