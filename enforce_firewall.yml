@@ -18,11 +18,11 @@
         immediate: yes
   
     - name: firewalld permits dhcpv6-client service
-    firewalld:
-      service: dhcpv6-client
-      permanent: true
-      state: enabled
-      immediate: yes
+      firewalld:
+        service: dhcpv6-client
+        permanent: true
+        state: enabled
+        immediate: yes
 
     - name: firewalld permits cockpit service
       firewalld:
