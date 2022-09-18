@@ -1,5 +1,5 @@
 - name: Enforce firewall rules
-  hosts: web
+  hosts: all
 
 - tasks: 
   - name: firewalld denies http service
